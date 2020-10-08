@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Open Gist in ImageJ.JS",
+  "author": "JM",
+  "description": "Add a button to github to open macro in ImageJ.JS",
+  "homepage_url": "https://github.com/mutterer/run-gist-in-imagej-js-extension",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://gist.github.com/*"],
+      "js": ["main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icons/run-gist-in-imagej-js-16x16.png",
+    "48": "icons/run-gist-in-imagej-js-48x48.png",
+    "128": "icons/run-gist-in-imagej-js-128x128.png",
+    "500": "icons/run-gist-in-imagej-js-500x500.png"
+  }
+}
