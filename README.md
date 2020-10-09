@@ -6,7 +6,7 @@ Code is adapted from 'Git History Browser Extension' by Luis Reinoso
 [![](example.png)](example.png)
 
 # Installation in Chrome
- * Download the code from this repository using the green 'Code' button on this page 
+ * Download the code from this repository using the green 'Code' button on this page (https://github.com/mutterer/run-gist-in-imagej-js-extension) 
  * Navigate to Chrome>Window>Extensions menu
  * Activate the Developper mode switch at the right hand side of the top menu bar
  * Select 'Load Unpacked' button at the left hand side of the menu bar
