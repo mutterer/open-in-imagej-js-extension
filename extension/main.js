@@ -25,7 +25,8 @@ function isButtonInsertedGithubGist(url) {
 	{
     const runGistInImageJdotJS = document.createElement('a');
     runGistInImageJdotJS.innerHTML = 'Run in ImageJ.JS';
-    runGistInImageJdotJS.setAttribute('class', 'btn btn-sm ');
+    runGistInImageJdotJS.style.color = "#0366d6";
+    runGistInImageJdotJS.setAttribute('class', 'btn btn-sm');
     runGistInImageJdotJS.setAttribute('target','_blank');
     runGistInImageJdotJS.setAttribute('href', "https://ij.imjoy.io/?run="+buttons[b].href.replace("https://gist.github.com/","https://gist.githubusercontent.com/"));
     try {
@@ -48,7 +49,8 @@ function isButtonInsertedGithub(url) {
 	{
     const runGistInImageJdotJS = document.createElement('a');
     runGistInImageJdotJS.innerHTML = 'Run in ImageJ.JS';
-    runGistInImageJdotJS.setAttribute('class', 'btn btn-sm ');
+    runGistInImageJdotJS.style.color = "#0366d6";
+    runGistInImageJdotJS.setAttribute('class', 'btn js-update-url-with-hash btn-sm BtnGroup-item');
     runGistInImageJdotJS.setAttribute('target','_blank');
     runGistInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?run='+url);
     try {
@@ -69,11 +71,16 @@ function isButtonInsertedZenodo(url) {
 	    imgUrl = buttons[i].href;
 	    imgUrl = imgUrl.replace('?download=1','');
 	    if (imgUrl.toLowerCase().endsWith('.tif')) {
-	      const openInImageJdotJS = document.createElement('a');
-	      openInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
+        const openInImageJdotJS = document.createElement('a');
+        const imagejIcon = document.createElement('img');
+        imagejIcon.src = 'https://ij.imjoy.io/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png';
+        imagejIcon.style.height = '16px';
+        openInImageJdotJS.appendChild(imagejIcon);
+        openInImageJdotJS.innerHTML += 'Open in ImageJ.JS';
+        openInImageJdotJS.style.color = "#0366d6";
 	      openInImageJdotJS.setAttribute('class', 'btn btn-xs btn-default');
 	      openInImageJdotJS.setAttribute('target','_blank');
-	      openInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?open='+imgUrl);
+        openInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?open='+imgUrl);
 	      try {
 	        buttons[i].parentNode.appendChild(openInImageJdotJS);
 	      } catch (error) {
