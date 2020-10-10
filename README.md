@@ -1,4 +1,4 @@
-# run-gist-in-imagej-js-extension
+# open-in-imagej-js-extension
 A Chrome extension that adds:
 
  * a **'Run in ImageJ.JS'** button to *.ijm files in **GitHubGist** and **GitHub Repositories**.
