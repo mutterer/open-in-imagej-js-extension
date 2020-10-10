@@ -24,11 +24,11 @@ function isButtonInsertedGithubGist(url) {
 	if ((b>-1)&&(buttons[b].href.endsWith(".ijm")))
 	{
     const runGistInImageJdotJS = document.createElement('a');
-    runGistInImageJdotJS.innerHTML = 'Run in ImageJ.JS';
+    runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
     runGistInImageJdotJS.style.color = "#0366d6";
     runGistInImageJdotJS.setAttribute('class', 'btn btn-sm');
     runGistInImageJdotJS.setAttribute('target','_blank');
-    runGistInImageJdotJS.setAttribute('href', "https://ij.imjoy.io/?run="+buttons[b].href.replace("https://gist.github.com/","https://gist.githubusercontent.com/"));
+    runGistInImageJdotJS.setAttribute('href', "https://ij.imjoy.io/?open="+buttons[b].href.replace("https://gist.github.com/","https://gist.githubusercontent.com/"));
     try {
       buttons[b].parentNode.appendChild(runGistInImageJdotJS);
       return true;
@@ -48,11 +48,11 @@ function isButtonInsertedGithub(url) {
 	if ((b>-1)&&(buttons[b].href.endsWith(".ijm")))
 	{
     const runGistInImageJdotJS = document.createElement('a');
-    runGistInImageJdotJS.innerHTML = 'Run in ImageJ.JS';
+    runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
     runGistInImageJdotJS.style.color = "#0366d6";
     runGistInImageJdotJS.setAttribute('class', 'btn js-update-url-with-hash btn-sm BtnGroup-item');
     runGistInImageJdotJS.setAttribute('target','_blank');
-    runGistInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?run='+url);
+    runGistInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?open='+url);
     try {
       buttons[b].parentNode.appendChild(runGistInImageJdotJS);
       return true;
