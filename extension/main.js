@@ -70,7 +70,7 @@ function isButtonInsertedZenodo(url) {
 	  if (buttons[i].innerText.indexOf('Download')>-1) {
 	    imgUrl = buttons[i].href;
 	    imgUrl = imgUrl.replace('?download=1','');
-	    if (imgUrl.toLowerCase().endsWith('.tif')) {
+	    if (imgUrl.toLowerCase().endsWith('.tif')||imgUrl.toLowerCase().endsWith('.ijm')) {
         const openInImageJdotJS = document.createElement('a');
         const imagejIcon = document.createElement('img');
         imagejIcon.src = 'https://ij.imjoy.io/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png';
