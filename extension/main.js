@@ -43,9 +43,9 @@ function isButtonInsertedGithub(url) {
   var buttons = document.getElementsByClassName("btn-sm");
   let b=-1;
   for (var i = 0; i < buttons.length; i++) {
-    if (buttons[i].innerText=="Raw") b=i;
+    if ((buttons[i].innerText=="Raw")||(buttons[i].innerText=="Download")) b=i;
   }
-  if ((b>-1)&&(buttons[b].href.endsWith(".ijm")))
+  if ((b>-1)&&(buttons[b].href.endsWith(".ijm")||buttons[b].href.endsWith(".tif")))
   {
     const runGistInImageJdotJS = document.createElement('a');
     runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
