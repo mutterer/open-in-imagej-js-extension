@@ -16,13 +16,13 @@ default:
   break;
 }
 function isButtonInsertedGithubGist(url) {
-	var buttons = document.getElementsByClassName("btn-sm");
-	let b=-1;
-	for (var i = 0; i < buttons.length; i++) {
-	  if (buttons[i].innerText=="Raw") b=i;
-	}
-	if ((b>-1)&&(buttons[b].href.endsWith(".ijm")))
-	{
+  var buttons = document.getElementsByClassName("btn-sm");
+  let b=-1;
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].innerText=="Raw") b=i;
+  }
+  if ((b>-1)&&(buttons[b].href.endsWith(".ijm")))
+  {
     const runGistInImageJdotJS = document.createElement('a');
     runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
     runGistInImageJdotJS.style.color = "#0366d6";
@@ -40,13 +40,13 @@ function isButtonInsertedGithubGist(url) {
   }
 }
 function isButtonInsertedGithub(url) {
-	var buttons = document.getElementsByClassName("btn-sm");
-	let b=-1;
-	for (var i = 0; i < buttons.length; i++) {
-	  if (buttons[i].innerText=="Raw") b=i;
-	}
-	if ((b>-1)&&(buttons[b].href.endsWith(".ijm")))
-	{
+  var buttons = document.getElementsByClassName("btn-sm");
+  let b=-1;
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].innerText=="Raw") b=i;
+  }
+  if ((b>-1)&&(buttons[b].href.endsWith(".ijm")))
+  {
     const runGistInImageJdotJS = document.createElement('a');
     runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
     runGistInImageJdotJS.style.color = "#0366d6";
@@ -65,12 +65,12 @@ function isButtonInsertedGithub(url) {
 }
 
 function isButtonInsertedZenodo(url) {
-	var buttons = document.getElementsByClassName("btn btn-xs btn-default");
-	for (var i = 0; i < buttons.length; i++) {
-	  if (buttons[i].innerText.indexOf('Download')>-1) {
-	    imgUrl = buttons[i].href;
-	    imgUrl = imgUrl.replace('?download=1','');
-	    if (imgUrl.toLowerCase().endsWith('.tif')||imgUrl.toLowerCase().endsWith('.ijm')) {
+  var buttons = document.getElementsByClassName("btn btn-xs btn-default");
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].innerText.indexOf('Download')>-1) {
+      imgUrl = buttons[i].href;
+      imgUrl = imgUrl.replace('?download=1','');
+      if (imgUrl.toLowerCase().endsWith('.tif')||imgUrl.toLowerCase().endsWith('.ijm')) {
         const openInImageJdotJS = document.createElement('a');
         const imagejIcon = document.createElement('img');
         imagejIcon.src = 'https://ij.imjoy.io/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png';
@@ -78,16 +78,16 @@ function isButtonInsertedZenodo(url) {
         openInImageJdotJS.appendChild(imagejIcon);
         openInImageJdotJS.innerHTML += 'Open in ImageJ.JS';
         openInImageJdotJS.style.color = "#0366d6";
-	      openInImageJdotJS.setAttribute('class', 'btn btn-xs btn-default');
-	      openInImageJdotJS.setAttribute('target','_blank');
+        openInImageJdotJS.setAttribute('class', 'btn btn-xs btn-default');
+        openInImageJdotJS.setAttribute('target','_blank');
         openInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?open='+imgUrl);
-	      try {
-	        buttons[i].parentNode.appendChild(openInImageJdotJS);
-	      } catch (error) {
-	        return false;
-	      }
- 	    }
-	  }
-	}
-	return true;
+        try {
+          buttons[i].parentNode.appendChild(openInImageJdotJS);
+        } catch (error) {
+          return false;
+        }
+      }
+    }
+  }
+  return true;
 }

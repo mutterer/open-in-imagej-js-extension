@@ -2,7 +2,10 @@
   "manifest_version": 2,
   "name": "Open Gist in ImageJ.JS",
   "author": "JM",
-  "description": "Add a button to github to open macro in ImageJ.JS",
+  "description": "Adds a buttons to GitHub and Zenodo *.ijm and *.tif items and a context menu command to open macro in ImageJ.JS",
+  "permissions": [
+    "contextMenus","tabs"
+  ],
   "homepage_url": "https://github.com/mutterer/run-gist-in-imagej-js-extension",
   "version": "1.0.0",
   "content_scripts": [
@@ -12,6 +15,8 @@
       "run_at": "document_end"
     }
   ],
+  "background" : { "scripts": ["contextMenu.js"] },
+  
   "icons": {
     "16": "icons/run-gist-in-imagej-js-16x16.png",
     "48": "icons/run-gist-in-imagej-js-48x48.png",
