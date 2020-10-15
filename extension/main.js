@@ -21,7 +21,7 @@ function isButtonInsertedGithubGist(url) {
   for (var i = 0; i < buttons.length; i++) {
     if (buttons[i].innerText=="Raw") b=i;
   }
-  if ((b>-1)&&(buttons[b].href.endsWith(".ijm")))
+  if ((b>-1)&&(buttons[b].href. toLowerCase().endsWith(".ijm")))
   {
     const runGistInImageJdotJS = document.createElement('a');
     runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
@@ -45,7 +45,7 @@ function isButtonInsertedGithub(url) {
   for (var i = 0; i < buttons.length; i++) {
     if ((buttons[i].innerText=="Raw")||(buttons[i].innerText=="Download")) b=i;
   }
-  if ((b>-1)&&(buttons[b].href.endsWith(".ijm")||buttons[b].href.endsWith(".tif")))
+  if ((b>-1)&&(buttons[b].href.toLowerCase().endsWith(".ijm")||buttons[b].href.toLowerCase().endsWith(".tif")))
   {
     const runGistInImageJdotJS = document.createElement('a');
     runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';

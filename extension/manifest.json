@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Open in ImageJ.JS",
   "author": "Jerome Mutterer and Wei Ouyang",
-  "description": "Adds buttons to GitHub and Zenodo *.ijm and *.tif items and a context menu command to open macro in ImageJ.JS",
+  "description": "Adds buttons to GitHub and Zenodo *.ijm and *.tif items and a context menu command to open images in ImageJ.JS",
   "permissions": [
     "contextMenus","tabs"
   ],
