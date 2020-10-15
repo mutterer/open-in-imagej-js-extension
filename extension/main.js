@@ -23,14 +23,14 @@ function isButtonInsertedGithubGist(url) {
   }
   if ((b>-1)&&(buttons[b].href. toLowerCase().endsWith(".ijm")))
   {
-    const runGistInImageJdotJS = document.createElement('a');
-    runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
-    runGistInImageJdotJS.style.color = "#0366d6";
-    runGistInImageJdotJS.setAttribute('class', 'btn btn-sm');
-    runGistInImageJdotJS.setAttribute('target','_blank');
-    runGistInImageJdotJS.setAttribute('href', "https://ij.imjoy.io/?open="+buttons[b].href.replace("https://gist.github.com/","https://gist.githubusercontent.com/"));
+    const openInImageJdotJS = document.createElement('a');
+    openInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
+    openInImageJdotJS.style.color = "#0366d6";
+    openInImageJdotJS.setAttribute('class', 'btn btn-sm');
+    openInImageJdotJS.setAttribute('target','_blank');
+    openInImageJdotJS.setAttribute('href', "https://ij.imjoy.io/?open="+buttons[b].href.replace("https://gist.github.com/","https://gist.githubusercontent.com/"));
     try {
-      buttons[b].parentNode.appendChild(runGistInImageJdotJS);
+      buttons[b].parentNode.appendChild(openInImageJdotJS);
       return true;
     } catch (error) {
       return false;
@@ -47,14 +47,14 @@ function isButtonInsertedGithub(url) {
   }
   if ((b>-1)&&(buttons[b].href.toLowerCase().endsWith(".ijm")||buttons[b].href.toLowerCase().endsWith(".tif")))
   {
-    const runGistInImageJdotJS = document.createElement('a');
-    runGistInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
-    runGistInImageJdotJS.style.color = "#0366d6";
-    runGistInImageJdotJS.setAttribute('class', 'btn js-update-url-with-hash btn-sm BtnGroup-item');
-    runGistInImageJdotJS.setAttribute('target','_blank');
-    runGistInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?open='+url);
+    const openInImageJdotJS = document.createElement('a');
+    openInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
+    openInImageJdotJS.style.color = "#0366d6";
+    openInImageJdotJS.setAttribute('class', 'btn js-update-url-with-hash btn-sm BtnGroup-item');
+    openInImageJdotJS.setAttribute('target','_blank');
+    openInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?open='+url);
     try {
-      buttons[b].parentNode.appendChild(runGistInImageJdotJS);
+      buttons[b].parentNode.appendChild(openInImageJdotJS);
       return true;
     } catch (error) {
       return false;
