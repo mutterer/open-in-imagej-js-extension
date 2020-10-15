@@ -7,7 +7,7 @@ A Chrome extension that adds:
 
 Code is adapted from 'Git History Browser Extension' by Luis Reinoso
 
-[![](example.png)](example.png)
+[![](screenshots/Stack0000.jpg)](screenshots/Stack0000.jpg)
 
 # Installation in Chrome
  * Download the code from this repository using the green 'Code' button on this page (https://github.com/mutterer/run-gist-in-imagej-js-extension) 
