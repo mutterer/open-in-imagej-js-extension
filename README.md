@@ -10,6 +10,8 @@ Code is adapted from 'Git History Browser Extension' by Luis Reinoso
 [![](screenshots/Stack0000.jpg)](screenshots/Stack0000.jpg)
 
 # Installation in Chrome
+ * Extension is now [published in Chrome Web Store](https://chrome.google.com/webstore/detail/open-in-imagejjs/gneikkcbnfohdpmjidceolbhpigpokij?hl=fr)
+ * or you can install it manually:
  * Download the code from this repository using the green 'Code' button on this page (https://github.com/mutterer/run-gist-in-imagej-js-extension) 
  * Navigate to Chrome>Window>Extensions menu
  * Activate the Developper mode switch at the right hand side of the top menu bar
