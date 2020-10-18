@@ -104,9 +104,16 @@ function isButtonInsertedHPA(url) {
         const imagejIcon = document.createElement('img');
         imagejIcon.src = 'https://ij.imjoy.io/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png';
         imagejIcon.style.height = '16px';
+        imagejIcon.style.transform = 'translateY(4px)';
         openInImageJdotJS.appendChild(imagejIcon);
         openInImageJdotJS.innerHTML += 'Open in ImageJ.JS';
-        openInImageJdotJS.style.color = "#0366d6";
+        openInImageJdotJS.style.color = "#84beff";
+        openInImageJdotJS.style.position = 'absolute';
+        openInImageJdotJS.style.left = '2px';
+        openInImageJdotJS.style.top = '2px';
+        openInImageJdotJS.style.background = '#0000005e';
+        openInImageJdotJS.style.cursor = 'pointer';
+        openInImageJdotJS.title = "Open in ImageJ.JS"
         openInImageJdotJS.setAttribute('class', 'ijjs');
         openInImageJdotJS.setAttribute('target','_blank');
         openInImageJdotJS.onclick = function() { 
