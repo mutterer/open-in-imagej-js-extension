@@ -7,7 +7,7 @@
     "contextMenus","tabs"
   ],
   "homepage_url": "https://github.com/mutterer/run-gist-in-imagej-js-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "content_scripts": [
     {
       "matches": ["https://gist.github.com/*","https://github.com/*","https://zenodo.org/*","https://www.proteinatlas.org/*"],

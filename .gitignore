@@ -6,3 +6,5 @@ extension/manifest.json~
 extension/contextMenu.js~
 extension.crx
 extension.pem
+*.zip
+*.zip
