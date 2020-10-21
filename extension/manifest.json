@@ -4,7 +4,7 @@
   "author": "Jerome Mutterer and Wei Ouyang",
   "description": "Adds buttons to GitHub and Zenodo *.ijm and *.tif items and a context menu command to open images in ImageJ.JS",
   "permissions": [
-    "contextMenus","tabs"
+    "contextMenus"
   ],
   "homepage_url": "https://github.com/mutterer/run-gist-in-imagej-js-extension",
   "version": "1.0.1",
