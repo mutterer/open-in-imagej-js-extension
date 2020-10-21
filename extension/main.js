@@ -99,7 +99,7 @@ function isButtonInsertedZenodo(url) {
 function isButtonInsertedHPA(url) {
   var element = document.getElementsByClassName("imageinfo");
   for (var i = 0; i < element.length; i++) {
-      if (i==0) console.log(element[i].parentElement.firstElementChild);
+      // if (i==0) console.log(element[i].parentElement.firstElementChild);
       const openInImageJdotJS = document.createElement('a');
         const imagejIcon = document.createElement('img');
         imagejIcon.src = 'https://ij.imjoy.io/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png';
