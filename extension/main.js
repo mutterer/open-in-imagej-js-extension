@@ -28,9 +28,10 @@ function isButtonInsertedGithubGist(url) {
   if ((b>-1)&&(buttons[b].href. toLowerCase().endsWith(".ijm")))
   {
     const openInImageJdotJS = document.createElement('a');
-    openInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
-    openInImageJdotJS.style.color = "#0366d6";
-    openInImageJdotJS.setAttribute('class', 'btn btn-sm');
+    const imagejIcon = document.createElement('img');
+    imagejIcon.src = 'https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg';
+    imagejIcon.style.transform = 'translateY(5px)';
+    openInImageJdotJS.appendChild(imagejIcon);
     openInImageJdotJS.setAttribute('target','_blank');
     openInImageJdotJS.setAttribute('href', "https://ij.imjoy.io/?open="+buttons[b].href.replace("https://gist.github.com/","https://gist.githubusercontent.com/"));
     try {
@@ -51,14 +52,15 @@ function isButtonInsertedGithub(url) {
   }
   if ((b>-1)&&(buttons[b].href.toLowerCase().endsWith(".ijm")||buttons[b].href.toLowerCase().endsWith(".tif")))
   {
-    const openInImageJdotJS = document.createElement('a');
-    openInImageJdotJS.innerHTML = 'Open in ImageJ.JS';
-    openInImageJdotJS.style.color = "#0366d6";
-    openInImageJdotJS.setAttribute('class', 'btn js-update-url-with-hash btn-sm BtnGroup-item');
+    const openInImageJdotJS = document.createElement('a');   
+    const imagejIcon = document.createElement('img');
+    imagejIcon.src = 'https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg';
+    imagejIcon.style.transform = 'translateY(3px)';
+    openInImageJdotJS.appendChild(imagejIcon);
     openInImageJdotJS.setAttribute('target','_blank');
     openInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?open='+url);
     try {
-      buttons[b].parentNode.appendChild(openInImageJdotJS);
+      buttons[b].parentNode.parentNode.appendChild(openInImageJdotJS);
       return true;
     } catch (error) {
       return false;
@@ -77,12 +79,8 @@ function isButtonInsertedZenodo(url) {
       if (imgUrl.toLowerCase().endsWith('.tif')||imgUrl.toLowerCase().endsWith('.ijm')) {
         const openInImageJdotJS = document.createElement('a');
         const imagejIcon = document.createElement('img');
-        imagejIcon.src = 'https://ij.imjoy.io/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png';
-        imagejIcon.style.height = '16px';
+        imagejIcon.src = 'https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg';
         openInImageJdotJS.appendChild(imagejIcon);
-        openInImageJdotJS.innerHTML += 'Open in ImageJ.JS';
-        openInImageJdotJS.style.color = "#0366d6";
-        openInImageJdotJS.setAttribute('class', 'btn btn-xs btn-default');
         openInImageJdotJS.setAttribute('target','_blank');
         openInImageJdotJS.setAttribute('href', 'https://ij.imjoy.io/?open='+imgUrl);
         try {
@@ -99,22 +97,14 @@ function isButtonInsertedZenodo(url) {
 function isButtonInsertedHPA(url) {
   var element = document.getElementsByClassName("imageinfo");
   for (var i = 0; i < element.length; i++) {
-      // if (i==0) console.log(element[i].parentElement.firstElementChild);
       const openInImageJdotJS = document.createElement('a');
         const imagejIcon = document.createElement('img');
-        imagejIcon.src = 'https://ij.imjoy.io/assets/icons/chrome/chrome-extensionmanagementpage-48-48.png';
-        imagejIcon.style.height = '16px';
-        imagejIcon.style.transform = 'translateY(4px)';
+        imagejIcon.src = 'https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg';
         openInImageJdotJS.appendChild(imagejIcon);
-        openInImageJdotJS.innerHTML += 'Open in ImageJ.JS';
-        openInImageJdotJS.style.color = "#84beff";
-        openInImageJdotJS.style.position = 'absolute';
-        openInImageJdotJS.style.left = '2px';
-        openInImageJdotJS.style.top = '2px';
-        openInImageJdotJS.style.background = '#0000005e';
         openInImageJdotJS.style.cursor = 'pointer';
         openInImageJdotJS.title = "Open in ImageJ.JS"
         openInImageJdotJS.setAttribute('class', 'ijjs');
+
         openInImageJdotJS.setAttribute('target','_blank');
         openInImageJdotJS.onclick = function() { 
           // the correct link can only be captured onClick, 
