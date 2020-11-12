@@ -101,6 +101,9 @@ function isButtonInsertedHPA(url) {
         const imagejIcon = document.createElement('img');
         imagejIcon.src = 'https://ij.imjoy.io/assets/badge/open-in-imagej-js-badge.svg';
         openInImageJdotJS.appendChild(imagejIcon);
+        openInImageJdotJS.style.position = 'absolute';
+        openInImageJdotJS.style.left = '2px';
+        openInImageJdotJS.style.top = '2px';
         openInImageJdotJS.style.cursor = 'pointer';
         openInImageJdotJS.title = "Open in ImageJ.JS"
         openInImageJdotJS.setAttribute('class', 'ijjs');
